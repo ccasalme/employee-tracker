@@ -1,10 +1,12 @@
 const { Client } = require('pg');
+const inquirer = require('inquirer');
+
 const client = new Client({
     host: 'localhost',
-    user: 'username',  // Replace with actual username
-    database: 'employee_tracker',  // Replace with actual database name
-    password: 'password',  // Replace with actual password
-    port: 5432,  // Default port
+    user: 'your-username',
+    database: 'your-database',
+    password: 'your-password',
+    port: 5432,
 });
 
 client.connect();
@@ -162,6 +164,7 @@ const updateEmployeeRole = async () => {
     console.log('Employee role updated!');
 };
 
+// Export the functions for use in index.js
 module.exports = {
     viewDepartments,
     viewRoles,
