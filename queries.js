@@ -1,12 +1,13 @@
+require('dotenv').config();
 const { Client } = require('pg');
 const inquirer = require('inquirer');
 
 const client = new Client({
-    host: 'localhost',
-    user: 'your-username',
-    database: 'your-database',
-    password: 'your-password',
-    port: 5432,
+    host: process.env.DB_HOST,           // Using environment variable for host
+    user: process.env.DB_USER,           // Using environment variable for user
+    database: process.env.DB_NAME,       // Using environment variable for database name
+    password: process.env.DB_PASSWORD,   // Using environment variable for password
+    port: process.env.DB_PORT,           // Using environment variable for port
 });
 
 client.connect();
