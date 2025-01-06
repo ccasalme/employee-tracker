@@ -14,6 +14,10 @@ const startApp = async () => {
             'Add a role',
             'Add an employee',
             'Update an employee role',
+            'Remove an employee',
+            'Update a department',
+            'Remove a department',  // <-- Added Remove a department
+            'Remove a role',        // <-- Added Remove a role
             'Quit'
         ],
     }]);
@@ -38,7 +42,19 @@ const startApp = async () => {
             await queries.addEmployee();
             break;
         case 'Update an employee role':
-            await queries.updateEmployeeRole();
+            await queries.updateEmployeeInfo();
+            break;
+        case 'Remove an employee':
+            await queries.removeEmployee();
+            break;
+        case 'Update a department':
+            await queries.updateDepartment();
+            break;
+        case 'Remove a department':  // <-- Added option to remove a department
+            await queries.removeDepartment();
+            break;
+        case 'Remove a role':        // <-- Added option to remove a role
+            await queries.removeRole();
             break;
         case 'Quit':
             console.log('Goodbye!');
