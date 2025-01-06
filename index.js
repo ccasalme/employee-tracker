@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
-const queries = require('./queries'); // assuming your query functions are in a separate file
+const queries = require('./queries'); // Import the functions from queries.js
 
 const startApp = async () => {
-    const answers = await inquirer.prompt({
+    const answers = await inquirer.prompt([{
         type: 'list',
         name: 'action',
         message: 'What would you like to do?',
@@ -16,7 +16,7 @@ const startApp = async () => {
             'Update an employee role',
             'Quit'
         ],
-    });
+    }]);
 
     switch (answers.action) {
         case 'View all departments':
@@ -45,8 +45,7 @@ const startApp = async () => {
             process.exit();
     }
 
-    // After completing the selected action, prompt the user again.
-    startApp();
+    startApp(); // Recursively call the function to prompt again
 };
 
 startApp();
