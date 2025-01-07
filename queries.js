@@ -325,6 +325,19 @@ const removeRole = async () => {
     console.log('Role removed!');
 };
 
+// View Total Utilized Budget by Department
+const viewTotalBudgetByDepartment = async () => {
+    const res = await client.query(`
+        SELECT department.name AS department,
+               SUM(role.salary) AS total_budget
+        FROM employee
+        JOIN role ON employee.role_id = role.id
+        JOIN department ON role.department_id = department.id
+        GROUP BY department.name
+    `);
+    console.table(res.rows);  // Display the result in a table format
+};
+
 // Export the functions for use in index.js
 module.exports = {
     viewDepartments,
@@ -337,6 +350,7 @@ module.exports = {
     updateDepartment,
     removeEmployee,
     removeDepartment,  // Export the new removeDepartment function
-    removeRole         // Export the new removeRole function
+    removeRole,         // Export the new removeRole function
+    viewTotalBudgetByDepartment
 };
 
