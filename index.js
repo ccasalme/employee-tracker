@@ -18,7 +18,7 @@ const startApp = async () => {
             'Update a department',
             'Remove a department',  // <-- Added Remove a department
             'Remove a role',        // <-- Added Remove a role
-            'viewTotalBudgetByDepartment', // <-- Added viewTotalBudgetByDepartment
+            'View total utilized budget by department', // <-- Added viewTotalBudgetByDepartment
             'Quit'
         ],
     }]);
@@ -56,6 +56,12 @@ const startApp = async () => {
             break;
         case 'Remove a role':        // <-- Added option to remove a role
             await queries.removeRole();
+            break;
+        case 'Quit':
+            console.log('Goodbye!');
+            process.exit();
+            case 'View total utilized budget by department': // <-- Ensure the case is here
+            await queries.viewTotalBudgetByDepartment();
             break;
         case 'Quit':
             console.log('Goodbye!');

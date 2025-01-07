@@ -13,5 +13,10 @@
     "dotenv": "^16.4.7",
     "inquirer": "^8.2.6",
     "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
   }
 }
