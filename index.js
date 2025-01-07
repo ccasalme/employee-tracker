@@ -3,19 +3,19 @@ const queries = require('./queries'); // Import the functions from queries.js
 
 const startApp = async () => {
     const answers = await inquirer.prompt([{
-        type: 'list',
+        type: 'list', 
         name: 'action',
         message: 'What would you like to do?',
         choices: [
-            'View all departments',
-            'View all roles',
-            'View all employees',
-            'Add a department',
-            'Add a role',
-            'Add an employee',
-            'Update an employee role',
-            'Remove an employee',
-            'Update a department',
+            'View all departments', // <-- Added View all departments
+            'View all roles', // <-- Added View all roles
+            'View all employees', // <-- Added View all employees
+            'Add a department', // <-- Added Add a department
+            'Add a role', // <-- Added Add a role
+            'Add an employee', // <-- Added Add an employee
+            'Update an employee role', // <-- Added Update an employee role
+            'Remove an employee', // <-- Added Remove an employee
+            'Update a department', // <-- Added Update a department
             'Remove a department',  // <-- Added Remove a department
             'Remove a role',        // <-- Added Remove a role
             'View total utilized budget by department', // <-- Added viewTotalBudgetByDepartment
