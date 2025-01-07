@@ -110,7 +110,7 @@ You can navigate the application by selecting the appropriate options based on y
   
 ## Tests
   
-YouTube Link will be updated soon!
+YouTube Link can be found here: [Employee Tracker YouTube Video] (https://youtu.be/GRe4Ads3QpA)
 
   
 ## License
