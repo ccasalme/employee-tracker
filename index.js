@@ -18,6 +18,7 @@ const startApp = async () => {
             'Update a department',
             'Remove a department',  // <-- Added Remove a department
             'Remove a role',        // <-- Added Remove a role
+            'viewTotalBudgetByDepartment', // <-- Added viewTotalBudgetByDepartment
             'Quit'
         ],
     }]);
